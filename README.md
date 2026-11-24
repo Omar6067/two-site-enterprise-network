@@ -3,8 +3,6 @@
 Two-site Cisco network (Alger and Oran) with a WAN link, DHCP relay,
 static routing, and centralized servers, built in Packet Tracer.
 
-## Topology
-![Topology](images/topology.png)
 
 ## Addressing
 | Device | Interface | IP Address |
