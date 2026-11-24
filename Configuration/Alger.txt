@@ -1,0 +1,87 @@
+!
+
+! Device: R-ALG
+
+! Configuration: Running Configuration
+
+!
+
+hostname R-ALG
+
+!
+
+! --- Interfaces ---
+
+!
+
+interface GigabitEthernet0/0
+
+ ip address 1.1.1.2 255.255.255.252
+
+ duplex auto
+
+ speed auto
+
+!
+
+interface GigabitEthernet0/1
+
+ ip address 105.10.10.2 255.0.0.0
+
+ duplex auto
+
+ speed auto
+
+!
+
+interface GigabitEthernet0/2
+
+ ip address 192.168.16.1 255.255.255.0
+
+ duplex auto
+
+ speed auto
+
+!
+
+interface Vlan1
+
+ no ip address
+
+ shutdown
+
+!
+
+! --- Routing & NetFlow ---
+
+!
+
+ip classless
+
+ip route 192.168.31.0 255.255.255.0 1.1.1.1
+
+!
+
+ip flow-export version 9
+
+!
+
+! --- Line Configuration ---
+
+!
+
+line con 0
+
+!
+
+line aux 0
+
+!
+
+line vty 0 4
+
+ login
+
+!
+
+end
